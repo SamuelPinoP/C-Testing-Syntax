@@ -1,0 +1,37 @@
+// Este programa chequea si escribistes un palindrom
+// Un palindrome se lee igual al derecho que al reves ejemplo madam y racecar
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+bool isPalindrome(string str);
+
+int main() 
+{
+  string str;
+
+  cout << "Enter a string: ";
+  
+  cin >> str;
+  
+  cout << endl;
+  
+  if (isPalindrome(str) == true)
+      cout << " Is a palindrome";
+  else
+      cout << "it is not a palindrome my friend";
+  return 0;     
+}  
+bool isPalindrome(string str)
+{
+    int length = str.length();
+    for (int i = 0; i < length / 2; i++) {
+        if (str[i] != str[length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
