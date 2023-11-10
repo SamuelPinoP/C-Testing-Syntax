@@ -1,0 +1,50 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+double larger(double, double);
+double largerx2(double, double);
+
+int main()
+{
+    double num1, num2, num3, mayor;
+
+    cout << "Give me three numbers and I will tell you the bigger one:";
+
+    cout << "First Number pls:" << endl;
+
+    cin >> num1;
+    cout << endl;
+
+    cout << "Give me the second number" << endl;
+
+    cin >> num2;
+    cout << endl;
+
+    cout << "Give me number 3" << endl;
+
+    cin >> num3;
+    cout << endl;
+
+    cout << "The larger number is: " << larger(num1, larger(num2, num3));
+
+    return 0;
+}
+
+double larger(double num1, double num2)
+{
+  double mayor;
+
+  if (num1 > num2)
+      mayor = num1;
+  else
+      mayor = num2;
+
+  return mayor;
+}
+double larger2x(double num1, double num2, double num3)
+{
+  return larger(num1, larger(num2, num3)); 
+}
