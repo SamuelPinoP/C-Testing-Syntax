@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+bool word(string str);
+
+int main() 
+{
+  string str;
+
+  cout << "Escribe la palabra word: " << endl;
+  cin >> str;
+  cout << endl;
+
+  if (word(str))
+      cout << "You wrote word" << endl;
+  else
+      cout << "You did not do it jaja";
+  return 0;
+}
+bool word(string str)
+{
+  if (str == "word")
+      return true;
+  else 
+      return false;
+
+  return word(str);
+}
